@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Libre+Baskerville&display=swap');
+
+/* =================================== */
+/* CSS Reset & Root Setup for React/Vite */
+/* =================================== */
+
+/* 1. Reset kaikille elementeille */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+/* 2. Root elementille (html + body) */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: darkgray; /* päätausta */
+  color: #000; /* pääväri tekstille */
+  overflow-x: hidden; /* estää vaakasuoran scrollin */
+  scroll-behavior: smooth;
+}
+
+/* 3. Kuvien ja media-elementtien automaattinen skaalaus */
+img,
+video,
+iframe,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 4. Linkkien perusasetus */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 5. Listojen perusasetus */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 6. Heading-elementtien marginit voi halutessa määritellä uudelleen */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+/* 7. Buttonin ja formien oletus */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+p {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(14px, 2.5vw, 18px);
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+h1 {
+  font-size: clamp(35px, 5vw, 45px);
+}
+
+h2 {
+  font-size: clamp(22px, 3.5vw, 28px);
+}
+
+h3 {
+  font-size: clamp(18px, 2.8vw, 24px);
+}
+
+:root {
+  --body_background: #010101;
+  --body_color: #fff;
+  --heading_color: #ffe400;
+}
+
+[data-theme='light'] {
+  --body_background: #fff;
+  --body_color: #000;
+  --heading_color: #000;
+}
+
+body {
+  background-color: var(--body_background);
+  color: var(--body_color);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.align_center {
+  display: flex;
+  align-items: center;
+}
+
+.margin-bottom {
+  margin: 0 0 1.5rem 0;
+}
+
+.margin-bottom-small {
+  margin: 0 0 1rem 0;
+}

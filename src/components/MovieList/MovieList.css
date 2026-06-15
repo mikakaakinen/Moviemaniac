@@ -1,0 +1,143 @@
+.movie_list {
+  width: 100%;
+}
+
+.movie_list_header {
+  padding: 10px 30px;
+  margin-bottom: 5px;
+}
+
+.movie_list_heading {
+  font-size: 26px;
+  color: var(--heading_color);
+}
+
+.movie_filter {
+  list-style: none;
+  font-size: 16px;
+}
+
+.movie_filter_item {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.movie_filter_item.active {
+  border-bottom: 1px solid #e6e6e6;
+  font-weight: 500;
+}
+
+.movie_sorting {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: inherit;
+  height: 30px;
+  padding: 0 5px;
+  margin: 0 10px;
+}
+
+.emoji {
+  width: 25px;
+  height: 25px;
+  margin: 0 20px;
+}
+
+.movie_cards {
+  display: grid;
+  justify-content: center;
+  gap: 16px;
+}
+
+@media (min-width: 1601px) {
+  .movie_cards {
+    grid-template-columns: repeat(6, 200px); /* 6 per rivi */
+  }
+}
+
+@media (max-width: 1600px) {
+  .movie_cards {
+    grid-template-columns: repeat(5, 200px); /* 5 per rivi */
+  }
+}
+
+@media (max-width: 1200px) {
+  .movie_cards {
+    grid-template-columns: repeat(4, 200px); /* 4 per rivi */
+  }
+}
+
+@media (max-width: 900px) {
+  .movie_cards {
+    grid-template-columns: repeat(3, 200px); /* 3 per rivi */
+  }
+}
+
+@media (max-width: 700px) {
+  .movie_cards {
+    grid-template-columns: repeat(2, 250px); /* 2 per rivi */
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .movie_cards {
+    grid-template-columns: repeat(2, 200px); /*1 per rivi */
+    justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .movie_cards {
+    grid-template-columns: repeat(1, 200px); /*1 per rivi */
+    justify-content: center;
+  }
+}
+
+/* Yleiset tyylit */
+.section-container {
+  padding: 20px;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column; /* Oletuksena pystysuora */
+  align-items: center;
+  gap: 16px; /* Väli elementtien välillä */
+}
+
+.filter-container {
+  display: flex;
+  flex-direction: column; /* Aluksi pystysuora suunta */
+  gap: 12px; /* Väli suodattimen ja valintojen välillä */
+}
+
+.sort-select {
+  padding: 8px;
+  font-size: 14px;
+}
+
+/* Vaakasuora asettelu yli 500px */
+@media (min-width: 500px) {
+  .header-container {
+    flex-direction: row; /* Vaakasuora */
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .filter-container {
+    flex-direction: row; /* Vaakasuora suunta */
+    gap: 16px; /* Väli elementtien välillä */
+  }
+
+  .title {
+    margin-right: 20px; /* Lisää marginaali otsikon ja muiden elementtien väliin */
+  }
+
+  .emoji {
+    margin-left: 16px; /* Lisää marginaali kuvan ja muiden elementtien väliin */
+  }
+}
